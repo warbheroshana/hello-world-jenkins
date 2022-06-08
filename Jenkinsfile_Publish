@@ -1,0 +1,13 @@
+pipeline{
+    agent{
+        docker(image : 'maven:latest')
+    }
+
+    stages{
+        stage('Maven'){
+            steps('Maven Version'){
+                sh 'mvn --version'
+            }
+        }
+    }
+}
